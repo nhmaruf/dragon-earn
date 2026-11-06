@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dragon Earn</title>
+<script src='//libtl.com/sdk.js' data-zone='12207768' data-sdk='show_12207768'></script>
+<style>
+body{background:#0a0a0a;color:#fff;font-family:Arial;text-align:center;padding:20px}
+.card{background:#1a1a1a;border:2px solid #FFD700;border-radius:20px;padding:20px;margin:15px 0}
+.gold{font-size:42px;color:#FFD700;font-weight:bold}
+.btn{background:#FFD700;color:#000;padding:15px;border-radius:12px;display:block;margin:10px 0;font-weight:bold;border:none;width:100%;font-size:16px}
+</style>
+</head>
+<body>
+<h1>🐉 DRAGON EARN</h1>
+<div class="card"><p>YOUR STASH</p><div class="gold" id="balance">0 Gold</div></div>
+<div class="card">
+<h3>🔥 DRAGON HUNT - EARN</h3>
+<button class="btn" onclick="watchAd(150)">WATCH ADS #1 - +150 Gold</button>
+<button class="btn" onclick="watchAd(90)">WATCH ADS #2 - +90 Gold</button>
+<button class="btn" onclick="watchAd(60)">WATCH ADS #3 - +60 Gold</button>
+<button class="btn" onclick="watchAd(70)">WATCH ADS #4 - +70 Gold</button>
+</div>
+<div class="card"><h3>👥 SUMMON</h3><p>1 Friend = 1800 Gold</p><button class="btn" onclick="share()">SHARE INVITE</button></div>
+<script>
+let bal=0;
+function watchAd(n){
+  show_12207768().then(()=>{
+    bal+=n;
+    document.getElementById('balance').innerText=bal+' Gold';
+    alert(n+' Gold Paila!');
+  }).catch(e=>{ alert('Ad ashe nai, abar try koro'); });
+}
+function share(){ navigator.clipboard.writeText("https://t.me/dragon_earn_123_bot"); alert('Link Copy Hoise!'); }
+</script>
+</body>
+</html>
